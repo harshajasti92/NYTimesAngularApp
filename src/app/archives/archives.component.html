@@ -2,15 +2,43 @@
   <form autocomplete="off">
     <input name="searchMonth" class="searchForm" type="select" [(ngModel)]="month" placeholder="Month">
     <input name="searchYear" class="searchForm" type="text" [(ngModel)]="year" placeholder="Year">
-    <button mat-raised-button color="warn" type="submit" (click)="archives()">Get Archives</button>
+    <button mat-raised-button color="warn" type="submit" (click)="archives();">Get Archives</button>
   </form>
   <br>
   <span style="color:#FF4432">{{errorMessage}}</span><br>
   <span>
     <b>Archive Count = </b><span style="color:#FF4432"><b>{{archiveCount}}</b></span>
   </span>
+  <br><br>
+  <button *ngIf="showAnalysisButton<1" mat-raised-button color="warn" (click)="showAnalysis();">Show Analysis</button>
+  <button *ngIf="showAnalysisButton>0" mat-raised-button color="warn" (click)="hideAnalysis();">Hide Analysis</button>
 
 </div>
+
+<div *ngIf="showAnalysisButton>0" style="text-align: center">
+  <div class="chart" style="display:inline-block; margin:30px">
+    <canvas baseChart height="600"
+    [data]="pieChartPageCountData"
+    [labels]="pieChartPageCountLabels"
+    [chartType]="pieChartType"
+    [options]="pieChartPageCountOptions"
+    [colors]="pieChartColors"
+    [legend]="pieChartLegend">
+  </canvas>
+  </div>
+
+  <div class="chart" style="display:inline-block; margin:30px">
+  <canvas baseChart height="600"
+  [data]="pieChartWordCountData"
+  [labels]="pieChartWordCountLabels"
+  [chartType]="pieChartType"
+  [options]="pieChartWordCountOptions"
+  [colors]="pieChartColors"
+  [legend]="pieChartLegend">
+  </canvas>
+  </div>
+</div>
+
 
 <div style="float:left;">
   <mat-card *ngFor="let article of articles" class="mat-card">

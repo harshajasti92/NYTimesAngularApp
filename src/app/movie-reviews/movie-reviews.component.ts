@@ -43,7 +43,7 @@ export class MovieReviewsComponent implements OnInit {
           art.imageSource = art.multimedia.src;
         }
         else{
-          art.imageSource = "";
+          art.imageSource = "assets/image-not-found.png";
         }
       });
       console.log(this.articles);

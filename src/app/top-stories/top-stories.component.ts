@@ -47,7 +47,7 @@ export class TopStoriesComponent implements OnInit {
         }
         else{
           // console.log("here");
-          art.imageSource = "";
+          art.imageSource = "assets/image-not-found.png";
         }
         // art.imageSource = art.media[0]['media-metadata'][2]['url'];
       // console.log(art.imageSource);

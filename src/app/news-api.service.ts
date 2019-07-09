@@ -54,9 +54,7 @@ export class NewsApiService {
 
   archives(month,year): Observable<Object> {
     var url = "https://api.nytimes.com/svc/archive/v1/"+year+"/"+month+".json?api-key="+this.api_key;
-    console.log(url);
     return this.http.get<Object>(url);
-    console.log(1);
   }
 
 }

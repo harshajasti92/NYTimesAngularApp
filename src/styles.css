@@ -2,7 +2,7 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 body {
     /* padding: 2em 23em; */
-    background:gray;
+    background:black;
     /* color: #FF4432; */
     color: white;
 }

@@ -37,7 +37,7 @@ export class SearchArticleComponent implements OnInit {
         }
         else{
           // console.log("here");
-          art.imageSource = "";
+          art.imageSource = "assets/image-not-found.png";
         }
       });
       console.log(this.articles);

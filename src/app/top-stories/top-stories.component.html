@@ -1,7 +1,7 @@
 <div class="">
 
   <div style="text-align:center;">
-    <span (click)="select(choice.key)" [style.color]="choice.value" style="cursor:pointer; font-size:18px;" *ngFor="let choice of selectCriteria | keyvalue"> {{choice.key | titlecase}} </span>
+    <span (click)="select(choice.key)" [style.color]="choice.value" style="cursor:pointer; font-size:18px;" *ngFor="let choice of selectCriteria | keyvalue">| {{choice.key | titlecase}} |</span>
   </div>
 
 
