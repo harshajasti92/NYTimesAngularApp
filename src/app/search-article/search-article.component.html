@@ -6,6 +6,7 @@
 
 <div class="">
   <mat-card *ngFor="let article of articles" class="mat-card">
+    <a href="{{article.web_url}}" target="_blank"></a>
     <mat-card-header class="card-header">
       <mat-card-title class="title">{{article.headline.main}}</mat-card-title>
     </mat-card-header>
