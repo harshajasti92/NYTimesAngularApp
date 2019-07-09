@@ -1,0 +1,30 @@
+<div align="center">
+  <form autocomplete="off">
+    <input name="searchMonth" class="searchForm" type="select" [(ngModel)]="month" placeholder="Month">
+    <input name="searchYear" class="searchForm" type="text" [(ngModel)]="year" placeholder="Year">
+    <button mat-raised-button color="warn" type="submit" (click)="archives()">Get Archives</button>
+  </form>
+  <br>
+  <span style="color:#FF4432">{{errorMessage}}</span><br>
+  <span>
+    <b>Archive Count = </b><span style="color:#FF4432"><b>{{archiveCount}}</b></span>
+  </span>
+
+</div>
+
+<div style="float:left;">
+  <mat-card *ngFor="let article of articles" class="mat-card">
+    <mat-card-header class="card-header">
+      <mat-card-title class="title">{{article.headline.main}}</mat-card-title>
+    </mat-card-header>
+    <div [hidden]="!article.imageSource">
+      <img mat-card-image class="img-article" src={{article.imageSource}}>
+    </div>
+    <mat-card-content>
+      <p>
+        {{article.snippet}}
+      </p>
+      <mat-card-subtitle *ngIf="article.byline" class="authorName">{{article.byline.original | titlecase }} - {{article.pub_date | date:'MMMM d, y'}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</div>

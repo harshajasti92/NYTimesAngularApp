@@ -1,0 +1,22 @@
+<div align="center">
+  <form autocomplete="off" (ngSubmit)="specificMovieReview()">
+    <input name="search" class="searchForm" type="text" [(ngModel)]="movieTitle" placeholder="Search for a movie's review">
+  </form>
+</div>
+
+<div style="float:left;">
+  <mat-card *ngFor="let article of articles" class="mat-card">
+    <mat-card-header class="card-header">
+      <mat-card-title class="title">{{article.headline}}</mat-card-title>
+    </mat-card-header>
+    <div [hidden]="!article.imageSource">
+      <img mat-card-image class="img-article" src={{article.imageSource}}>
+    </div>
+    <mat-card-content>
+      <p>
+        {{article.summary_short}}
+      </p>
+      <mat-card-subtitle class="authorName">{{article.byline | titlecase }} - {{article.date_updated | date:'MMMM d, y'}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</div>

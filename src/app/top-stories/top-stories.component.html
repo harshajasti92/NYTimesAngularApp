@@ -1,0 +1,26 @@
+<div class="">
+
+  <div style="text-align:center;">
+    <span (click)="select(choice.key)" [style.color]="choice.value" style="cursor:pointer; font-size:18px;" *ngFor="let choice of selectCriteria | keyvalue"> {{choice.key | titlecase}} </span>
+  </div>
+
+
+  <div style="float:left;">
+    <mat-card *ngFor="let article of articles" class="mat-card">
+      <mat-card-header class="card-header">
+        <mat-card-title class="title">{{article.title}}</mat-card-title>
+      </mat-card-header>
+      <div [hidden]="!article.imageSource">
+        <img mat-card-image class="img-article" src={{article.imageSource}}>
+      </div>
+      <mat-card-content>
+        <p>
+          {{article.abstract}}
+        </p>
+        <mat-card-subtitle class="authorName">{{article.byline | titlecase }} - {{article.published_date | date:'MMMM d, y'}}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+</div>

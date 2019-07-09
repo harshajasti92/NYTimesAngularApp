@@ -4,24 +4,23 @@
   height: auto !important; /* needs to be important because md-card also sets it that way */
 }
 
-.headerRow{
-  margin-right: 15px;
-}
-.headerRow:focus {
-  outline: none;
-}
-
 .title{
     font-weight: bold;
+}
+
+.searchForm{
+  text-align: center;
+  width: 600px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid;
+  color: #FF4432;
+  border-color: black;
 }
 
 .card-header{
   margin-bottom: 5px;
   height: 100px;
-}
-
-.active-link{
-  color: #FF4432;
 }
 
 .authorName{
@@ -48,7 +47,3 @@
   cursor: pointer;
   /* margin-bottom: 10px; */
 }
-
-/* select:focus {
-outline: none;
-} */

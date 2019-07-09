@@ -4,13 +4,6 @@
   height: auto !important; /* needs to be important because md-card also sets it that way */
 }
 
-.headerRow{
-  margin-right: 15px;
-}
-.headerRow:focus {
-  outline: none;
-}
-
 .title{
     font-weight: bold;
 }
@@ -20,9 +13,7 @@
   height: 100px;
 }
 
-.active-link{
-  color: #FF4432;
-}
+.active a{color:red;}
 
 .authorName{
   font-size: 12px;
@@ -48,7 +39,3 @@
   cursor: pointer;
   /* margin-bottom: 10px; */
 }
-
-/* select:focus {
-outline: none;
-} */

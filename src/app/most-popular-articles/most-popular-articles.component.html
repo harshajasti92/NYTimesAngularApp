@@ -1,0 +1,16 @@
+<div class="">
+  <mat-card *ngFor="let article of articles" class="mat-card">
+    <mat-card-header class="card-header">
+      <mat-card-title class="title">{{article.title}}</mat-card-title>
+    </mat-card-header>
+    <div>
+      <img mat-card-image class="img-article" src={{article.imageSource}}>
+    </div>
+    <mat-card-content>
+      <p>
+        {{article.abstract}}
+      </p>
+      <mat-card-subtitle class="authorName">{{article.byline | titlecase }} - {{article.published_date | date:'MMMM d, y'}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</div>
