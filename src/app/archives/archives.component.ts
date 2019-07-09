@@ -67,7 +67,7 @@ export class ArchivesComponent implements OnInit {
   // public pieChartPlugins = [pluginDataLabels];
   public pieChartColors = [
     {
-      backgroundColor: ['yellow', 'teal', 'aqua'],
+      backgroundColor: ['orange', 'teal', 'aqua'],
     },
   ];
 
